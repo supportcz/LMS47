@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.2.7.54 SP?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="5ACCIF01.FPLS-001" Type="5ACCIF01.FPLS-001" Version="1.2.0.0">
+    <Connection Connector="SL" TargetModule="5PPC2100_BY22_000b" TargetConnector="SL1" />
+  </Module>
+  <Module Name="5AP1120.1043-000" Type="5AP1120.1043-000" Version="1.0.1.0" />
+  <Module Name="5PPC2100_BY22_000b" Type="5PPC2100.BY22-000" Version="1.2.4.0">
+    <Connection Connector="SY" TargetModule="5AP1120.1043-000" TargetConnector="SY1" />
+    <Connector Name="IF3">
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Connector Name="IF4">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="192.168.0.13" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="LMS47_Config2" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TaskClassIdleTime" Value="2000" />
+    <Parameter ID="Cyclic1Duration" Value="2000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic2Duration" Value="20000" />
+    <Parameter ID="Cyclic2Tolerance" Value="20000" />
+    <Parameter ID="Cyclic3Duration" Value="50000" />
+    <Parameter ID="Cyclic3Tolerance" Value="50000" />
+    <Parameter ID="Cyclic4Duration" Value="100000" />
+    <Parameter ID="Cyclic4Tolerance" Value="100000" />
+    <Parameter ID="Cyclic5Duration" Value="200000" />
+    <Parameter ID="Cyclic5Tolerance" Value="200000" />
+    <Parameter ID="Cyclic6Duration" Value="500000" />
+    <Parameter ID="Cyclic6Tolerance" Value="500000" />
+    <Parameter ID="Cyclic7Duration" Value="1000000" />
+    <Parameter ID="Cyclic7Tolerance" Value="1000000" />
+    <Parameter ID="Cyclic8Duration" Value="10000" />
+    <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Parameter ID="TimerDevice" Value="5ACCIF01.FPLS-001.IF1" />
+  </Module>
+  <Module Name="8AC114.60-2" Type="8AC114.60-2" Version="1.0.0.8">
+    <Connection Connector="SS" TargetModule="8V1045.00-2" TargetConnector="SS1" />
+    <Connection Connector="PLK1" TargetModule="5ACCIF01.FPLS-001" TargetConnector="IF1" NodeNumber="1" />
+  </Module>
+  <Module Name="8AC125.60-1" Type="8AC125.60-1" Version="1.0.0.2">
+    <Connection Connector="SS" TargetModule="8V1045.00-2" TargetConnector="SS2" />
+  </Module>
+  <Module Name="8V1045.00-2" Type="8V1045.00-2" Version="1.0.0.2">
+    <Parameter ID="QuickStopIsNormallyOpen_r1" Value="on" />
+  </Module>
+</Hardware>
